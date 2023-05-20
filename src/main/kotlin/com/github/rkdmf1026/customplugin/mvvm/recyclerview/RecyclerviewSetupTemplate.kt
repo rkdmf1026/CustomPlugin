@@ -6,7 +6,7 @@ val recyclerActivitySetupTemplate
     get() = template {
         name = "Test RecyclerView Activity"
         description = "리사이클러뷰 액티비티"
-        minApi = 16
+        minApi = 24
         category = Category.Other // Check other categories
         formFactor = FormFactor.Mobile
         screens = listOf(
