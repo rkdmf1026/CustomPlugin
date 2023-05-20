@@ -1,5 +1,7 @@
 package com.github.rkdmf1026.customplugin.mvvm.recyclerview
 
+import com.android.tools.idea.wizard.template.*
+import com.github.rkdmf1026.customplugin.extension.*
 val recyclerActivitySetupTemplate
     get() = template {
         name = "Test RecyclerView Activity"

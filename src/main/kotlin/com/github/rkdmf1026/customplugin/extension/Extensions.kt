@@ -1,5 +1,9 @@
 package com.github.rkdmf1026.customplugin.extension
 
+import com.android.tools.idea.wizard.template.*
+import com.intellij.psi.*
+import org.jetbrains.kotlin.idea.*
+
 fun String.toSnakeCase() = replace(humps, "_").toLowerCase()
 private val humps = "(?<=.)(?=\\p{Upper})".toRegex()
 
