@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+
 }
 
 group = properties("pluginGroup").get()
@@ -34,8 +35,10 @@ kotlin {
 // Configure Gradle IntelliJ Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
     pluginName = properties("pluginName")
-    version = properties("platformVersion")
+    //version = properties("platformVersion")
     type = properties("platformType")
+
+    intellij.localPath = properties("StudioRunPath")
 
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins = properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) }
